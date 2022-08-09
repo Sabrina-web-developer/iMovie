@@ -37,7 +37,7 @@ const tmdbApi = {
         const url = category[cate]+'/'+id
         return axiosClient.get(url, params)
     },
-    credits: (cate, id)=>{
+    casts: (cate, id)=>{
         const url =category[cate]+'/'+ id+ '/credits'
         return axiosClient.get(url,  {params:{}})
     },

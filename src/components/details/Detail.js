@@ -3,6 +3,7 @@ import { useParams} from 'react-router-dom'
 import apiConfig from '../../api/apiConfig'
 import tmdbApi from '../../api/tmbdApi'
 import './detail.scss'
+import CastList from './cast-list'
 
 const Detail = () => {
   const {category, id} = useParams()
@@ -42,10 +43,12 @@ const Detail = () => {
                 </div>
                 <p className="overview">{item.overview}</p>
                   <div className='cast'>
-                    <div className='section_header'>
-                      <h2>Casts</h2>
-                    </div>
-                    {/* cast lists */}
+                  <div className="cast">
+                      <div className="section__header">
+                          <h2>Casts</h2>
+                      </div>
+                      <CastList id={item.id}/>
+                  </div>
                   </div>
               </div>
             </div>
