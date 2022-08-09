@@ -1,0 +1,22 @@
+@use '../../scss/' as *;
+.wrapper{
+    margin: 4rem 0rem;
+    width: 100%;
+}
+
+.movie-list{
+    min-height:10rem;
+    overflow:hidden;
+    position:relative;
+    width: 100%;
+    img{
+        display: inline-block;
+        width: 500px;
+    }
+}
+.section_header{
+    @include flex(center,space-between);
+    margin-bottom:10px;
+}
+
+
